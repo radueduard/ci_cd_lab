@@ -9,7 +9,9 @@ spec:
   strategy:
     canary:
       steps:
-        - setWeight: 50
+        - setWeight: 25
+        - pause: { duration: 120s }
+        - setWeight: 75
         - pause: { duration: 60s }
         - setWeight: 100
   selector:
